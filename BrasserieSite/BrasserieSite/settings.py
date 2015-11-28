@@ -52,7 +52,7 @@ DATE_FORMAT = "Y-m-d"
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/home/diab/BrasserieWeb/static'
+MEDIA_ROOT = '/home/diab/BrasserieWeb/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -67,13 +67,14 @@ STATIC_ROOT = '/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = os.path.join(os.path.dirname(__file__), '/static/')
+STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+ '/home/diab/BrasserieWeb/static',
 )
 
 # List of finder classes that know how to find static files in
@@ -113,7 +114,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-"/home/diab/BrasserieWeb/templates"
+"/home/diab/BrasserieWeb/templates",
 )
 
 INSTALLED_APPS = (
