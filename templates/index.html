@@ -5,8 +5,8 @@
 <head>
 	<meta charset=utf-8" />
 	<title>Brasserie - Barbane</title>
-	<meta name="viewport" content="width=divice-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="bluberry.css" />
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/blueberry.css"/>
 <style type="text/css">
 * {
 	margin: 0;
@@ -46,11 +46,68 @@ a:hover {
 	color: #FFF;
 	text-decoration: underline;
 }
+header {
+	background: #405580;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.90;
+}
+#logo {
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 80px;
+	background-image: url("{{ STATIC_URL }}images/logo2.jpg");
+	background-size: 160px 120px;
+	backgroung-align: center;
+	 background-repeat: no-repeat;
+ }
+ nav {
+	 float: right;
+	 padding: 35px 20px 0;
+ }
+ #menu-icon {
+	 display: hidden;
+	 width: 40px;
+	 height: 40px;
+	 background: url("{{ STATIC_URL }}images/menuicon.png");
+ }
+ a:hover#menu-icon {
+	 border-radius: 4px 4px 0 0;
+ }
+ ul {
+	 list-style:none;
+ }
+ nav ul li {
+	 display: inline-block;
+	 float: left;
+	 padding: 10px;
+ }
+ .current {
+	 color: #FFF;
+	 text-decoration: underline;
+ }
+ #doc {
+	 margin: 40px 0;
+ }
+ #content {
+	 margin: 0 auto;
+	 max-width: 1140px;
+ }
+ .blueberry {
+	 max-width: 960px;
+	 margin-top: 110px;
+ }
+	
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js></script>
-<script src="jquery.blueberry.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.blueberry.js"></script>
 <script>
-$(window).load(function() {
+ $(window).load(function() {
 	$('.blueberry').blueberry();
 });
 </script>
@@ -62,10 +119,10 @@ $(window).load(function() {
 	<nav>
 		<a href="#" id="menu-icon"></a>
 		<ul>
-		<li><a href="#" class="current">home</a></li>
-		<li><a href="#">Accueil</a></li>
+		<li><a href="#" class="current">Accueil</a></li>
 		<li><a href="#">Nos Biere</a></li>
 		<li><a href="#">Commande</a></li>
+		<li><a href="#">Login/Register</a></li>
 		<li><a href="#">Contact</a></li>
 		</ul>
 	</nav>
