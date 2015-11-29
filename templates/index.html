@@ -5,8 +5,8 @@
 <head>
 	<meta charset=utf-8" />
 	<title>Brasserie - Barbane</title>
-	<meta name="viewport" content="width=divice-width, initial-scale=1.0"/>
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/blueberry.css"/>
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/blueberry.css" type="text/css" />
 <style type="text/css">
 * {
 	margin: 0;
@@ -18,6 +18,7 @@ body {
 	font: 14px/20px Arial, san-Serif;
 	color: #555;
 	margin: 0;
+	background-image: url("{{ STATIC_URL }}images/back3.jpg");
 }
 h1 {
 	text-align: center;
@@ -49,7 +50,7 @@ a:hover {
 header {
 	background: #405580;
 	width: 100%;
-	height: 100px;
+	height: 90px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -60,9 +61,9 @@ header {
 	margin: 20px;
 	float: left;
 	width: 200px;
-	height: 80px;
+	height: 70px;
 	background-image: url("{{ STATIC_URL }}images/logo2.jpg");
-	background-size: 160px 120px;
+	background-size: 160px 110px;
 	backgroung-align: center;
 	 background-repeat: no-repeat;
  }
@@ -75,6 +76,7 @@ header {
 	 width: 40px;
 	 height: 40px;
 	 background: url("{{ STATIC_URL }}images/menuicon.png");
+	 background-size: 40px 40px;
  }
  a:hover#menu-icon {
 	 border-radius: 4px 4px 0 0;
@@ -97,17 +99,131 @@ header {
  #content {
 	 margin: 0 auto;
 	 max-width: 1140px;
- }
- .blueberry {
-	 max-width: 960px;
 	 margin-top: 110px;
+	 
  }
+ 
+ .blueberry {
+	 max-width: 760px;
+	 margin-top: 110px;
+	 margin-right: 70px;
+	 background-color: black;
+ }
+ section {
+	 width:29%;
+	 float: left;
+	 margin: 2% 2%;
+	 text-align: center;
+ }
+ .clear {
+	 clear: both;
+ }
+ article {
+	 float: left;
+	 margin: 0 auto;
+	 width: 50%;
+	 height: auto;
+	 padding: 4%;
+ }
+ aside {
+	 float: right;
+	  float: left;
+	 margin: 0 auto;
+	 width: 35%;
+	 height: auto;
+	 padding: 3%;
+ }
+ ul.booba li {
+	 padding-left: 3%;
+ }
+ footer {
+	 background: #333333;
+	 width: 100%;
+	 overflow: hidden;
+	 apacity: 0.90;
+	 
+ }
+ footer p, footer h3 {
+	 color: #FFF;
+ }
+ footer p a {
+	 color: #FFF;
+	 text-decoration: none;
+ }
+ ul.social li {
+	 display: inline;
+ }
+ ul.social li img {
+	 height: 50px;
+ }
+ footer.seconde {
+	 border-top: 1px solid #4D4E50;
+     background-color: #333333;
+     max-height: 50px;
+     text-align: center;
+     opacity: 0.95;
+ }
+ /*----------------------------------MEDIA!!!-------------------*/
+@media screen and (max-width: 478px) {
+	 body {
+		 position: absolute;
+	 }
+	 
+@media screen and (max-width: 740px) {
+	header {
+		position: absolute;
+	}
+	#menu-icon {
+		display: inline-block;
+	}
+	nav ul, nav:active ul {
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #405580;
+		border: 1px solid #FFF;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 2px 0 2px 2px; 
+	}
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav:hover ul {
+		display: block;
+	}
+	section {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	article {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	aside {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+ 
 	
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script src="{{ STATIC_URL }}js/jquery.blueberry.js"></script>
 <script>
- $(window).load(function() {
+	$(window).load(function() {
 	$('.blueberry').blueberry();
 });
 </script>
@@ -127,36 +243,38 @@ header {
 		</ul>
 	</nav>
 </header>
+	
 	<div id="doc">
-		<div od="content">
+		<div id="content">
 			<div class="blueberry">
-				<ul class="slides"></ul>
+				<ul class="slides">
 					<li><img src="{{ STATIC_URL }}images/Barbane1.jpg" width="960px" height="479px"></li>
-					<li><img src="{{ STATIC_URL }}images/Booba.jpg" width="960px" height="479px"></li>
+					<li><img src="{{ STATIC_URL }}images/Booba.jpeg" width="960px" height="479px"></li>
 					<li><img src="{{ STATIC_URL }}images/barbane2.jpg" width="960px" height="479px"></li>
+					</ul>
 			</div>
 		</div>
 	</div>
 	<section>
-		<img src="{{ STATIC_URL }}images/coeur.JPG"width="125" height="80"/>
+		<img src="{{ STATIC_URL }}images/coeur.png"width="125" height="100"/>
 		<h1>nos bières sont 100% naturels</h1>
 		<p>Toutes nos bières sont pures malt, elles sont fabriquées à l'aide de malts d'orges ou de blé, sans ajouter de sucre.La gazéification de nos bières est naturelle, elle est réalisée en cuves, sans aucun ajout de CO2.</p>
 	</section>
 	<section>
-		<img src="{{ STATIC_URL }}images/livraison.jpg"width="125" height="80"/>
+		<img src="{{ STATIC_URL }}images/livraison.jpg"width="125" height="100"/>
 		<h1>Vente à emporter</h1>
 		<p>La boutique de vente à emporter est ouverte pour cette rentrée.
 
 		quand nous sommes sur place nous nous faisons toujours un plaisir de vous accueillir et vous proposer notre selection du moment.</p>
 	</section>
 	<section>
-		<img src="{{ STATIC_URL }}images/commander.jpg"width="125" height="80"/>
+		<img src="{{ STATIC_URL }}images/commander.jpg"width="125" height="100"/>
 		<h1>Commander en ligne</h1>
 		<p>Faites vous livrer directement un carton de 24 bouteilles ( ou plusieurs …), directement chez vous, dans toute la France. Le prix est fixe!</p>
 	</section>
 	<div class="clear"></div>
 	<article>
-		<img src="{{ STATIC_URL }}images/booba1.jpg" width="800" height="530"/>
+		<img src="{{ STATIC_URL }}images/booba1.jpg" width="700" height="530"/>
 	</article>
 	<aside>
 		<h2>Du rap et de la bière</h2>
@@ -200,7 +318,7 @@ header {
 			</ul>
 		</section>
 		<section>
-			<img src="{{ STATIC_URL }}images/Footerimage.jpg"
+			<img src="{{ STATIC_URL }}images/footerlogo.png" width="200" height="125">
 		</section>
 	</footer>
 	<footer class="seconde">
