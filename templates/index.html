@@ -49,6 +49,8 @@ a:hover {
 }
 header {
 	background: #405580;
+	background-image: url("{{ STATIC_URL }}images/header-beer.jpg");
+	background-size: 100% 90px;
 	width: 100%;
 	height: 90px;
 	position: fixed;
@@ -60,10 +62,10 @@ header {
 #logo {
 	margin: 20px;
 	float: left;
-	width: 200px;
+	width: 500px;
 	height: 70px;
-	background-image: url("{{ STATIC_URL }}images/logo2.jpg");
-	background-size: 160px 110px;
+	background-image: url("{{ STATIC_URL }}images/logo2.png");
+	background-size: 500px 80px;
 	backgroung-align: center;
 	 background-repeat: no-repeat;
  }
@@ -105,8 +107,7 @@ header {
  
  .blueberry {
 	 max-width: 760px;
-	 margin-top: 110px;
-	 margin-right: 70px;
+	 margin-top: 100px;
 	 background-color: black;
  }
  section {
@@ -261,14 +262,14 @@ header {
 		<p>Toutes nos bières sont pures malt, elles sont fabriquées à l'aide de malts d'orges ou de blé, sans ajouter de sucre.La gazéification de nos bières est naturelle, elle est réalisée en cuves, sans aucun ajout de CO2.</p>
 	</section>
 	<section>
-		<img src="{{ STATIC_URL }}images/livraison.jpg"width="125" height="100"/>
+		<img src="{{ STATIC_URL }}images/livraison.png"width="125" height="100"/>
 		<h1>Vente à emporter</h1>
 		<p>La boutique de vente à emporter est ouverte pour cette rentrée.
 
 		quand nous sommes sur place nous nous faisons toujours un plaisir de vous accueillir et vous proposer notre selection du moment.</p>
 	</section>
 	<section>
-		<img src="{{ STATIC_URL }}images/commander.jpg"width="125" height="100"/>
+		<img src="{{ STATIC_URL }}images/commander.png"width="125" height="100"/>
 		<h1>Commander en ligne</h1>
 		<p>Faites vous livrer directement un carton de 24 bouteilles ( ou plusieurs …), directement chez vous, dans toute la France. Le prix est fixe!</p>
 	</section>

@@ -25,6 +25,15 @@ DATABASES = {
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'barbanebrasserie'
+EMAIL_HOST_PASSWORD = ''
+SERVER_EMAIL = 'Barbane@gmail.com'
+DEFAULT_FROM_EMAIL = 'barbanebrasserie'
+
+ACCOUNT_ACTIVATION_DAYS = 7
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -126,6 +135,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'registration',
+
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
