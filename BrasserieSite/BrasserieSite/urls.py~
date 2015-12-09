@@ -7,12 +7,15 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', "BrasserieSite.views.index", name='index'),
+    url(r'^NosBiere/', "BrasserieSite.views.NosBiere", name='NosBiere'),
+    url(r'^contact/', "BrasserieSite.views.contact", name='contact'),
+    url(r'^html_form_send.php/', "BrasserieSite.views.html_form_send", name='html_form_send'),
         
     # url(r'^BrasserieSite/', include('BrasserieSite.foo.urls')),
     
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^accounts/', include('registration.backends.default.urls')),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 

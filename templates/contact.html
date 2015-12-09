@@ -1,0 +1,21 @@
+{% extends "base/base1.html" %}
+{% block content %}
+{% block title %}Contact - {{ block.super }}{% endblock %}
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+
+<h1>Contact</h1>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+{% endblock %}

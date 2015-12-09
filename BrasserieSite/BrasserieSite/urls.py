@@ -7,6 +7,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', "BrasserieSite.views.index", name='index'),
+    url(r'^NosBiere/', "BrasserieSite.views.NosBiere", name='NosBiere'),
+    url(r'^contact/$', "BrasserieSite.views.contact", name='contact'),
         
     # url(r'^BrasserieSite/', include('BrasserieSite.foo.urls')),
     

@@ -1,6 +1,15 @@
 from django.shortcuts import render_to_response
-from django.template import RenderContext
+from django.template import RequestContext
 
 
 def index(request):
     return render_to_response('index.html', {},RequestContext(request))
+
+def NosBiere(request):
+    return render_to_response('NosBiere.html', {},RequestContext(request))
+
+def contact(request):
+    return render_to_response('contact.html', {},RequestContext(request))
+
+def html_form_send(request):
+    return render_to_response('html_form_send.php', {},RequestContext(request))

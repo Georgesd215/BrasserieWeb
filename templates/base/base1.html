@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset=utf-8" />
 	<title>Brasserie - Barbane</title>
-	<meta name="viewport" content="width=divice-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/blueberry.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style type="text/css">
 * {
 	margin: 0;
@@ -14,11 +12,11 @@
 	padding: 0;
 }
 body {
-	background: #f0f0f0;
+	background-color: black;
 	font: 14px/20px Arial, san-Serif;
 	color: #555;
 	margin: 0;
-	background-image: url("{{ STATIC_URL }}images/back3.jpg");
+	
 }
 h1 {
 	text-align: center;
@@ -216,17 +214,9 @@ header {
 	}
 }
 
-
  
 	
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="{{ STATIC_URL }}js/jquery.blueberry.js"></script>
-<script>
-	$(window).load(function() {
-	$('.blueberry').blueberry();
-});
-</script>
 </head>
 
 <body>
@@ -243,62 +233,9 @@ header {
 		</ul>
 	</nav>
 </header>
-	
-	<div id="doc">
-		<div id="content">
-			<div class="blueberry">
-				<ul class="slides">
-					<li><img src="{{ STATIC_URL }}images/Barbane1.jpg" width="960px" height="479px"></li>
-					<li><img src="{{ STATIC_URL }}images/Booba.jpeg" width="960px" height="479px"></li>
-					<li><img src="{{ STATIC_URL }}images/barbane2.jpg" width="960px" height="479px"></li>
-					</ul>
-			</div>
-		</div>
-	</div>
-	<section>
-		<img src="{{ STATIC_URL }}images/coeur.png"width="125" height="100"/>
-		<h1>nos bières sont 100% naturels</h1>
-		<p>Toutes nos bières sont pures malt, elles sont fabriquées à l'aide de malts d'orges ou de blé, sans ajouter de sucre.La gazéification de nos bières est naturelle, elle est réalisée en cuves, sans aucun ajout de CO2.</p>
-	</section>
-	<section>
-		<img src="{{ STATIC_URL }}images/livraison.png"width="125" height="100"/>
-		<h1>Vente à emporter</h1>
-		<p>La boutique de vente à emporter est ouverte pour cette rentrée.
-
-		quand nous sommes sur place nous nous faisons toujours un plaisir de vous accueillir et vous proposer notre selection du moment.</p>
-	</section>
-	<section>
-		<img src="{{ STATIC_URL }}images/commander.png"width="125" height="100"/>
-		<h1>Commander en ligne</h1>
-		<p>Faites vous livrer directement un carton de 24 bouteilles ( ou plusieurs …), directement chez vous, dans toute la France. Le prix est fixe!</p>
-	</section>
 	<div class="clear"></div>
-	<article>
-		<img src="{{ STATIC_URL }}images/booba1.jpg" width="700" height="530"/>
-	</article>
-	<aside>
-		<h2>Du rap et de la bière</h2>
-		<ul class="booba">
-		Il s'agit désormais non plus d'une rumeur mais d'une information puisque Booba (Numéro 1 fan de la bière BARBANE) a officiellement annoncé sur son compte Instagram l'arrivée de ce nouvel album. Le 4 décembre 2015, c'est la date qu'a choisi le rappeur du 9.2 pour sortir son huitième album solo intitulé « Nero Nemesis » (ndlr : vengeance noire)
-		</ul>
-	</aside>
-	<div class="clear"></div>
-	<section>
-		<h1>BARBANE DÉMENTHE</h1>
-		<img src="{{ STATIC_URL }}images/Barbane3.png"width="125" height="80"/>
-		<p>DÉMENTHE n.f. Bière inédite qui marie en finesse les caractéristiques traditionnelles de la bière blanche à celles d’une herbe aux vertus rafraîchissantes. Une subtile acidité provenant des céréales et de la fermentation s’harmonise à la fraîcheur délicate d’un bouquet de menthe, d’écorces de citron, de gingembre et de houblons.
-		Surprenante cette démenthe !</p>
-	</section>
-	<section>
-		<h1>BARBANE FLORALE</h1>
-		<img src="{{ STATIC_URL }}images/Barbane4.png"width="125" height="80"/>
-		<p>Pour célébrer le renouveau de la nature, la Perle Florale puise sa fraîcheur dans des orges de printemps et des fleurs de houblon de la dernière récolte.</p>
-	</section>
-	<section>
-		<h1>BARBANE BLONDE</h1>
-		<img src="{{ STATIC_URL }}images/Barbane5.png"width="125" height="80"/>
-		<p>“… Voilà une vraie pils comme on n’en avait pas dégusté depuis longtemps, en tout cas en France. Tout y est: le malt, le houblon, la finesse et le corps, le tout dans une grande harmonie. Un vrai retour aux origines de la bière alsacienne.” </p>
-	</section>
+	{% block content %}
+	{% endblock %}
 	<footer>
 		<section>
 		<h3><b>BARBANE</b></h3>
