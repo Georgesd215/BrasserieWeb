@@ -218,7 +218,6 @@ header {
 	
 </style>
 </head>
-
 <body>
 	<header>
 	<a href="#" id="logo"></a>
@@ -227,8 +226,12 @@ header {
 		<ul>
 		<li><a href="/" class="current">Accueil</a></li>
 		<li><a href="/NosBiere">Nos Biere</a></li>
-		<li><a href="#">Commande</a></li>
-		<li><a href="/accounts/login">Login/Register</a></li>
+		<li><a href="/Commande">Commande</a></li>
+		{% if user.is_authenticated %}
+      <li><a href="accounts/logout">Log Out</a></li>
+      {% else %}
+     <li><a href="/accounts/login">Login</a></li>
+      {% endif %}
 		<li><a href="/contact">Contact</a></li>
 		</ul>
 	</nav>
