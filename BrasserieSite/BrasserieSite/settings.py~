@@ -26,13 +26,6 @@ DATABASES = {
 ALLOWED_HOSTS = []
  
 
-ACCOUNT_ACTIVATION_DAYS = 7
-
-DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False 
-EMAIL_PORT = 1025
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
