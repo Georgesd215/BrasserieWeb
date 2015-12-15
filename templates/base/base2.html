@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset=utf-8" />
+	<title>Brasserie - Barbane</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+body {
+	background-color: black;
+	font: 14px/20px Arial, san-Serif;
+	color: #555;
+	margin: 0;
+	height:100%
+	
+}
+html {
+	height:100%;
+}
+h1 {
+	text-align: center;
+	font-size:180%;
+	line-height: 120%;
+	padding: 5% 0;
+}
+h2 {
+	text-decoration: underline;
+	line-height:280%;
+	padding-left: 2%;
+}
+h3 {
+	line-height: 110%;
+	padding: 5% 0;
+}
+p {
+	padding: 1%;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+header {
+	background: #405580;
+	background-image: url("{{ STATIC_URL }}images/header-beer.jpg");
+	background-size: 100% 90px;
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.90;
+}
+#logo {
+	margin: 20px;
+	float: left;
+	width: 500px;
+	height: 70px;
+	background-image: url("{{ STATIC_URL }}images/logo2.png");
+	background-size: 500px 80px;
+	backgroung-align: center;
+	 background-repeat: no-repeat;
+ }
+ nav {
+	 float: right;
+	 padding: 35px 20px 0;
+ }
+ #menu-icon {
+	 display: hidden;
+	 width: 40px;
+	 height: 40px;
+	 background: url("{{ STATIC_URL }}images/menuicon.png");
+	 background-size: 40px 40px;
+ }
+ a:hover#menu-icon {
+	 border-radius: 4px 4px 0 0;
+ }
+ ul {
+	 list-style:none;
+ }
+ 
+
+
+ nav ul li {
+	 display: inline-block;
+	 float: left;
+	 padding: 10px;
+ }
+ .current {
+	 color: #FFF;
+	 text-decoration: underline;
+ }
+ #doc {
+	 margin: 40px 0;
+ }
+ #content {
+	 margin: 0 auto;
+	 max-width: 1140px;
+	 margin-top: 110px;
+	 
+ }
+ 
+ .blueberry {
+	 max-width: 760px;
+	 margin-top: 100px;
+	 background-color: black;
+ }
+ 
+ 
+ section {
+	 width:29%;
+	 float: left;
+	 margin: 2% 2%;
+	 text-align: center;
+ }
+ .clear {
+	 clear: both;
+ }
+ article {
+	 float: left;
+	 margin: 0 auto;
+	 width: 50%;
+	 height: auto;
+	 padding: 4%;
+ }
+ aside {
+	 float: right;
+	 margin: 0 auto;
+	 width: 35%;
+	 height: auto;
+	 padding: 3%;
+ }
+ ul.booba li {
+	 padding-left: 3%;
+ }
+ footer {
+	 background: #333333;
+	 width: 100%;
+	 overflow: hidden;
+	 apacity: 0.90;
+	 
+ }
+ footer p, footer h3 {
+	 color: #FFF;
+ }
+ footer p a {
+	 color: #FFF;
+	 text-decoration: none;
+ }
+ ul.social li {
+	 display: inline;
+ }
+ ul.social li img {
+	 height: 50px;
+ }
+ footer.seconde {
+	 border-top: 1px solid #4D4E50;
+     background-color: #333333;
+     max-height: 50px;
+     text-align: center;
+     opacity: 0.95;
+     
+ }
+ /*----------------------------------MEDIA!!!-------------------*/
+@media screen and (max-width: 478px) {
+	 body {
+		 position: absolute;
+	 }
+	 
+@media screen and (max-width: 740px) {
+	header {
+		position: absolute;
+	}
+	#menu-icon {
+		display: inline-block;
+	}
+	nav ul, nav:active ul {
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #405580;
+		border: 1px solid #FFF;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 2px 0 2px 2px; 
+	}
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav:hover ul {
+		display: block;
+	}
+	section {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	article {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	aside {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+ 
+	
+</style>
+</head>
+<body>
+	
+	<header>
+	<a href="#" id="logo"></a>
+	<nav>
+		<a href="#" id="menu-icon"></a>
+		<ul>
+		<li><a href="/" class="current">Accueil</a></li>
+		<li><a href="/NosBiere">Nos Biere</a></li>
+		<li><a href="/Commande">Commande</a></li>
+		{% if user.is_authenticated %}
+      <li><a href="/accounts/logout">Log Out</a></li>
+      {% else %}
+     <li><a href="/accounts/login">Login</a></li>
+      {% endif %}
+		<li><a href="/contact">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+	
+	{% block content %}
+	
+	
+	{% endblock %} 
+	
+	<footer>
+		<section>
+		<h3><b>BARBANE</b></h3>
+		<p><b>06 222 333</b><br><br>
+		Brasserie Barbane<br>
+		Strasbourg, France<br>
+		Brasserie@barbane.fr</p>
+		
+		</section>
+		<section>
+			<h3>rejoignez-nous sur</h3>
+			<ul class="social">
+				<li><a href="#"><img src="{{ STATIC_URL }}images/Facebooklogo.png"width="60" height="54"/></a></li>
+				<li><a href="#"><img src="{{ STATIC_URL }}images/Twitterlogo.png"width="60" height="54"/></a></li>
+				<li><a href="#"><img src="{{ STATIC_URL }}images/Youtubelogo.png"width="60" height="54"/></a></li>
+				<li><a href="#"><img src="{{ STATIC_URL }}images/Googlepluslogo.png"width="60" height="54"/></a></li>
+			</ul>
+		</section>
+		<section>
+			<img src="{{ STATIC_URL }}images/footerlogo.png" width="200" height="125">
+		</section>
+	</footer>
+	
+</body>
+
+</html>
