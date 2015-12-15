@@ -5,7 +5,7 @@
 <head>
 	<meta charset=utf-8" />
 	<title>Brasserie - Barbane</title>
-	<meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/blueberry.css" type="text/css" />
 <style type="text/css">
 * {
@@ -16,6 +16,7 @@
 body {
 	background: #f0f0f0;
 	font: 14px/20px Arial, san-Serif;
+	height: 100%;
 	color: #555;
 	margin: 0;
 	background-image: url("{{ STATIC_URL }}images/back3.jpg");
@@ -239,7 +240,7 @@ header {
 		<li><a href="/NosBiere">Nos Biere</a></li>
 		<li><a href="/Commande">Commande</a></li>
 		{% if user.is_authenticated %}
-      <li><a href="accounts/logout">Log Out</a></li>
+      <li><a href="/accounts/logout">Log Out</a></li>
       {% else %}
      <li><a href="/accounts/login">Login</a></li>
       {% endif %}

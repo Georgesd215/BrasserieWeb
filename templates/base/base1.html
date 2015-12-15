@@ -16,7 +16,11 @@ body {
 	font: 14px/20px Arial, san-Serif;
 	color: #555;
 	margin: 0;
+	height:100%
 	
+}
+html {
+	height:100%;
 }
 h1 {
 	text-align: center;
@@ -84,6 +88,14 @@ header {
  ul {
 	 list-style:none;
  }
+ 
+ .wrapper {
+min-height: 100%;
+height: auto;
+height: 100%;
+margin: 0 auto -4em;
+}
+
  nav ul li {
 	 display: inline-block;
 	 float: left;
@@ -108,6 +120,14 @@ header {
 	 margin-top: 100px;
 	 background-color: black;
  }
+ 
+ .footer, .push {
+height: 4em;
+} 
+.footer2, .push {
+height: 4em;
+} 
+
  section {
 	 width:29%;
 	 float: left;
@@ -160,6 +180,7 @@ header {
      max-height: 50px;
      text-align: center;
      opacity: 0.95;
+     
  }
  /*----------------------------------MEDIA!!!-------------------*/
 @media screen and (max-width: 478px) {
@@ -219,6 +240,7 @@ header {
 </style>
 </head>
 <body>
+	
 	<header>
 	<a href="#" id="logo"></a>
 	<nav>
@@ -228,7 +250,7 @@ header {
 		<li><a href="/NosBiere">Nos Biere</a></li>
 		<li><a href="/Commande">Commande</a></li>
 		{% if user.is_authenticated %}
-      <li><a href="accounts/logout">Log Out</a></li>
+      <li><a href="/accounts/logout">Log Out</a></li>
       {% else %}
      <li><a href="/accounts/login">Login</a></li>
       {% endif %}
@@ -236,9 +258,14 @@ header {
 		</ul>
 	</nav>
 </header>
-	<div class="clear"></div>
+	<div class="wrapper">
 	{% block content %}
+	
+	
 	{% endblock %}
+	<div class="push"></div>
+        </div> 
+	<div class="footer">
 	<footer>
 		<section>
 		<h3><b>BARBANE</b></h3>
@@ -261,9 +288,7 @@ header {
 			<img src="{{ STATIC_URL }}images/footerlogo.png" width="200" height="125">
 		</section>
 	</footer>
-	<footer class="seconde">
-		<p>Copyright - Barbane,2015.</p>
-	</footer>
+	</div>
 </body>
 
 </html>
